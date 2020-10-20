@@ -41,14 +41,14 @@
       /*Ex4*/
       h3+div {}
 
-      main div div:first-of-type.blog-post {}
+      .blog-post:first-of-type {}
 
       /*Ex5*/
 
       nav.nav>a:nth-child(even) {}
 
       /*Ex6*/
-      main div div:last-of-type.blog-post {}
+      .blog-post:last-of-type {}
 
       /*Ex7*/
       aside ol>li {}
@@ -473,12 +473,9 @@
       //changeColorTitle();
       //Ex15
       const changeColumnSize = () => {
-        const div = document.querySelectorAll("div.container >div");
-        const post_headings = div[2].querySelectorAll("div.col-md-6");
-        console.log(post_headings)
-        post_headings.forEach(element => {
-          element.classList.remove("col-md-6");
-          element.classList.add("col-md-4");
+        const div = document.querySelectorAll("h2");
+        div.forEach(element => {
+          element.classList.add("col-2");
         });
       }
       //changeColumnSize();
