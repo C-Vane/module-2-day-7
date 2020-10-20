@@ -24,33 +24,57 @@
             EX8) Write a selector to target the second post author
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
             EX10) Write a selector to target the footer
+            
         */
+      /*Ex1*/
+      h1 {}
+
+      /**/
+      nav.nav>a {}
+
+      /**/
+
+      nav.nav>a+a {}
+
+      /**/
+      .jumbotron p>a {}
+
+      /**/
+      h3+div {}
+
+      /**/
+      main div div:first-of-type.blog-post {}
+
+      /**/
+      main div div:last-of-type.blog-post {}
+
+      /**/
+      aside ol>li {}
+
+      /**/
+      h3+div+div h2+p>a {}
+
+      /**/
+      footer p:last-child>a {}
+
+      .blog-footer p+p>a {}
+
+      footer :last-child {
+        display: none;
+      }
     </style>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
     <meta name="generator" content="Jekyll v3.8.5" />
     <title>Blog Template · Bootstrap</title>
 
-    <link
-      rel="canonical"
-      href="https://getbootstrap.com/docs/4.3/examples/blog/"
-    />
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/" />
 
     <!-- Bootstrap core CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
     <style>
       .bd-placeholder-img {
@@ -68,10 +92,7 @@
         }
       }
     </style>
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet" />
   </head>
 
   <body>
@@ -86,20 +107,9 @@
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="mx-3"
-                role="img"
-                viewBox="0 0 24 24"
-                focusable="false"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+                viewBox="0 0 24 24" focusable="false">
                 <title>Search</title>
                 <circle cx="10.5" cy="10.5" r="7.5" />
                 <path d="M21 21l-5.2-5.2" />
@@ -138,9 +148,7 @@
             contents.
           </p>
           <p class="lead mb-0">
-            <a href="#" class="text-white font-weight-bold"
-              >Continue reading...</a
-            >
+            <a href="#" class="text-white font-weight-bold">Continue reading...</a>
           </p>
         </div>
       </div>
@@ -148,8 +156,7 @@
       <div class="row mb-2">
         <div class="col-md-6">
           <div
-            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
               <strong class="d-inline-block mb-2 text-primary">World</strong>
               <h3 class="mb-0">Featured post</h3>
@@ -161,16 +168,8 @@
               <a href="#" class="stretched-link">Continue reading</a>
             </div>
             <div class="col-auto d-none d-lg-block">
-              <svg
-                class="bd-placeholder-img"
-                width="200"
-                height="250"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-              >
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                 <title>Placeholder</title>
                 <rect width="100%" height="100%" fill="#55595c" />
                 <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
@@ -180,8 +179,7 @@
         </div>
         <div class="col-md-6">
           <div
-            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
               <strong class="d-inline-block mb-2 text-success">Design</strong>
               <h3 class="mb-0">Post title</h3>
@@ -193,16 +191,8 @@
               <a href="#" class="stretched-link">Continue reading</a>
             </div>
             <div class="col-auto d-none d-lg-block">
-              <svg
-                class="bd-placeholder-img"
-                width="200"
-                height="250"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-                role="img"
-                aria-label="Placeholder: Thumbnail"
-              >
+              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
                 <title>Placeholder</title>
                 <rect width="100%" height="100%" fill="#55595c" />
                 <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
@@ -373,13 +363,7 @@
 
           <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
-            <a
-              class="btn btn-outline-secondary disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Newer</a
-            >
+            <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
           </nav>
         </div>
         <!-- /.blog-main -->
@@ -452,6 +436,103 @@
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
+      //Ex11
+      const addNewLink = () => {
+        const new_link = document.createElement("a");
+
+        const nav = document.getElementsByTagName("nav");
+
+        new_link.innerText = "New link";
+        new_link.classList.add("p-2", "text-muted")
+        nav[0].appendChild(new_link);
+      }
+      //addNewLink();
+      //Ex12
+      const removeSearchIcon = () => {
+        let lastdiv = document.querySelector("header>div").lastChild.previousSibling;
+
+        const icon = lastdiv.firstChild.nextSibling;
+
+        icon.remove();
+      }
+      //removeSearchIcon();
+      //Ex13
+      const changeBackgroundJumbo = () => {
+        const jumbo = document.querySelector("div.jumbotron");
+        jumbo.classList.remove("bg-dark")
+        jumbo.style.backgroundColor = "red";
+      }
+      //changeBackgroundJumbo();
+      //Ex14
+      const changeColorTitle = () => {
+        const title = document.getElementsByTagName("h1");
+
+        title[0].style.color = "red";
+      }
+      //changeColorTitle();
+      //Ex15
+      const changeColumnSize = () => {
+        const div = document.querySelectorAll("div.container >div");
+        const post_headings = div[2].querySelectorAll("div.col-md-6");
+        console.log(post_headings)
+        post_headings.forEach(element => {
+          element.classList.remove("col-md-6");
+          element.classList.add("col-md-4");
+        });
+      }
+      //changeColumnSize();
+      //Ex16
+      const removeLinks = () => {
+        const links = document.getElementsByTagName("aside")[0].lastChild.previousSibling.querySelectorAll("ol>li");
+        links.forEach(element => {
+          element.remove();
+        })
+      }
+      //removeLinks();
+      //Ex17
+      const removeFirstChars = () => {
+        const blog_posts = document.getElementsByClassName("blog-post");
+        for (let i = 0; i < blog_posts.length; i++) {
+          const paragraph = blog_posts[i].querySelectorAll("p").item(1);
+          paragraph.innerText = paragraph.innerText.slice(49);
+        }
+      }
+      //removeFirstChars();
+      //Ex18
+      const newBlog = () => {
+        const blog_destination = document.getElementsByClassName("blog-main")[0];
+        const new_blog = document.createElement("div");
+        new_blog.classList.add("blog-post");
+        blog_destination.insertBefore(new_blog, blog_destination.lastChild.previousSibling);
+        const new_title = document.createElement("h2");
+        new_title.classList.add("blog-title");
+        new_title.innerText = "New Blog";
+        new_blog.appendChild(new_title);
+        const new_paragraph = document.createElement("p");
+        new_paragraph.innerText = "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+        new_blog.appendChild(new_paragraph);
+      }
+      const attachNew = () => {
+        const button = document.querySelector("nav.blog-pagination").lastChild.previousSibling;
+        button.classList.remove("disabled");
+        button.addEventListener('click', newBlog);
+
+      }
+      attachNew();
+      //Ex19
+      const deleteLastBlog = () => {
+        const blog_list = document.getElementsByClassName("blog-main")[0];
+
+      }
+      const attachOld = () => {
+        const button = document.querySelector("nav.blog-pagination").firstChild.nextSibling;
+        button.classList.remove("disabled");
+        button.addEventListener('click', deleteLastBlog);
+
+      }
+      attachOld();
+
     </script>
   </body>
+
 </html>
