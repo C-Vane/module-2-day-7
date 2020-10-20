@@ -29,39 +29,40 @@
       /*Ex1*/
       h1 {}
 
-      /**/
+      /*Ex2*/
       nav.nav>a {}
 
-      /**/
 
-      nav.nav>a+a {}
-
-      /**/
+      /*Ex3*/
       .jumbotron p>a {}
 
-      /**/
+
+
+      /*Ex4*/
       h3+div {}
 
-      /**/
       main div div:first-of-type.blog-post {}
 
-      /**/
+      /*Ex5*/
+
+      nav.nav>a:nth-child(even) {}
+
+      /*Ex6*/
       main div div:last-of-type.blog-post {}
 
-      /**/
+      /*Ex7*/
       aside ol>li {}
 
-      /**/
+      /*Ex8*/
       h3+div+div h2+p>a {}
 
-      /**/
+      /*Ex9*/
       footer p:last-child>a {}
 
       .blog-footer p+p>a {}
 
-      footer :last-child {
-        display: none;
-      }
+      /*Ex10*/
+      body>:nth-child(3) {}
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -521,16 +522,30 @@
       attachNew();
       //Ex19
       const deleteLastBlog = () => {
-        const blog_list = document.getElementsByClassName("blog-main")[0];
+        const blog_list = document.getElementsByClassName("blog-post");
+        console.log(blog_list)
+        blog_list[blog_list.length - 1].remove();
 
       }
       const attachOld = () => {
         const button = document.querySelector("nav.blog-pagination").firstChild.nextSibling;
-        button.classList.remove("disabled");
         button.addEventListener('click', deleteLastBlog);
 
       }
       attachOld();
+      //Ex20
+      const alertAutor = (event) => {
+        const autorname = event.currentTarget.querySelector("p>a").innerText;
+        alert("The autor is " + autorname)
+
+      }
+      const attachalert = () => {
+        const paragraph = document.querySelectorAll(".blog-post");
+        paragraph.forEach(element => {
+          element.addEventListener('mouseover', alertAutor);
+        })
+      }
+      //attachalert();
 
     </script>
   </body>
